@@ -177,3 +177,11 @@ input[type=number] {
   padding: 10px 90px;
   animation: fadeIn 1s;
 }
+
+/* styles for trained models */
+.title-color{
+  color: #0b8fdc;
+}
+.trained-model-container{
+  animation: fadeIn 1s;
+}

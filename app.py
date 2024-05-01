@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 from Models.predict_new_data import predict_new_data
 from Models.age_group_data_analysis.age_group_data import calculate_avg_data
+# from Models.matrics_score import final_metrics_score
 import numpy as np
 import pandas as pd
 
@@ -43,8 +44,15 @@ def predict_diabetes():
 def explore_dataset():
     data = pd.read_csv("Dataset/diabetes.csv")
     return render_template(
-        "dataset.html",title="Explore Dataset | DiabetIQ Insight",
-        datas=data
+        "dataset.html", title="Explore Dataset | DiabetIQ Insight", datas=data
+    )
+
+
+@app.route("/trained_models", methods=["GET"])
+def trained_models():
+    # datas=final_metrics_score
+    return render_template(
+        "trained_models.html", title="Trained Models | DiabetIQ Insight"
     )
 
 

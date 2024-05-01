@@ -8,6 +8,7 @@
   <title>{{title}}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/dataTables.bootstrap5.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='highlight/styles/github-dark-dimmed.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
 </head>
 
@@ -30,26 +31,26 @@
           </a>
 
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Data Preprocessing</a></li>
+            <li><a class="dropdown-item" href="/trained_models#data_preprocessing">Data Preprocessing</a></li>
             <li>
               <hr class="dropdown-divider" />
             </li>
-            <li><a class="dropdown-item" href="#">Logistic Regression</a></li>
+            <li><a class="dropdown-item" href="/trained_models#logistic_regression">Logistic Regression</a></li>
             <li>
-              <a class="dropdown-item" href="#">K-Nearest Neighbors (K-NN)</a>
+              <a class="dropdown-item" href="/trained_models#k_nearest_neighbors">K-Nearest Neighbors (K-NN)</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">Support Vector Machine (SVM)</a>
+              <a class="dropdown-item" href="/trained_models#svm">Support Vector Machine (SVM)</a>
             </li>
-            <li><a class="dropdown-item" href="#">Kernel SVM</a></li>
-            <li><a class="dropdown-item" href="#">Naive Bayes</a></li>
+            <li><a class="dropdown-item" href="/trained_models#kernal_svm">Kernel SVM</a></li>
+            <li><a class="dropdown-item" href="/trained_models#naive_bayes">Naive Bayes</a></li>
             <li>
-              <a class="dropdown-item" href="#">Decision Tree Classification</a>
+              <a class="dropdown-item" href="/trained_models#decision_tree_classification">Decision Tree Classification</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">Random Forest Classification</a>
+              <a class="dropdown-item" href="/trained_models#random_forest_classification">Random Forest Classification</a>
             </li>
-            <li><a class="dropdown-item" href="#">XGBoost</a></li>
+            <li><a class="dropdown-item" href="/trained_models#xg_boost">XGBoost</a></li>
           </ul>
         </li>
         <li class="nav-item mx-2">
