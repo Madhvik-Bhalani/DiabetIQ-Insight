@@ -15,7 +15,7 @@ y_pred = classifier.predict(X_test)
 #print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1)) # [Predicted_Result,Actual_Result]
 
 # save the classification model as a pickle file
-joblib.dump(classifier, "pkl_files/KernalSVM.pkl")
+joblib.dump(classifier, "models/pkl_files/KernalSVM.pkl")
 
 # Predicting a new result
 new_result=classifier.predict(sc.transform([[1,140,70,41,168,30.5,0.53,25]]))

@@ -4,14 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Madhvik Bhalani">
   <title>{{title}}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dataTables.bootstrap5.css') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg px-2 d-flex justify-content-between align-items-center">
-    
+
     <div class="log-container d-flex justify-content-between align-items-center">
       <a href="/">
         <img class="web-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="DiabetIQ Insight" />
@@ -51,7 +53,7 @@
           </ul>
         </li>
         <li class="nav-item mx-2">
-          <a class="nav-link fs-5 nav-links" href="#">Dataset</a>
+          <a class="nav-link fs-5 nav-links" href="/explore_dataset">Dataset</a>
         </li>
       </ul>
     </div>
@@ -63,12 +65,18 @@
   <footer class="footer text-center w-100">
     <div class="p-3">
       <h5 class="text-dark footer-text">
-        © 2024: Designed and developed by <span class="name-link"><a href="https://www.linkedin.com/in/MadhvikBhalani/" class="text-dark linkdin-link" target="_blank">Madhvik Bhalani</a> </span>
+        © 2024: Designed and developed by <span class="name-link"><a href="https://www.linkedin.com/in/MadhvikBhalani/"
+            class="text-dark linkdin-link" target="_blank">&lt;&#x2f;Madhvik Bhalani&gt;</a> </span>
       </h5>
     </div>
   </footer>
 
   <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/dataTables.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/dataTables.bootstrap5.js') }}"></script>
+  {% block dataset_table %} {% endblock %}
+  
 </body>
 
 </html>

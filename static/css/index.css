@@ -19,11 +19,11 @@ input[type=number] {
 
 @keyframes fadeIn {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
 
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -136,13 +136,44 @@ input[type=number] {
   animation: fadeIn 1s;
 }
 
-.prediction-img{
+.prediction-img {
   width: 680px;
   height: 500px;
 }
 
-.form-container{
+.form-container {
   width: 800px !important;
   margin-right: 35px;
   margin-bottom: 50px;
+}
+
+/* styles for predict_diabetes */
+.table-header-name {
+  color: #0b8fdc !important;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.table-container {
+  padding: 10px 90px;
+
+}
+
+.table-text {
+  width: 900px;
+}
+
+.result-table {
+  width: 730px;
+}
+
+
+/* styles for dataset */
+.source-link {
+  text-decoration: none;
+}
+
+.dataset-container {
+  padding: 10px 90px;
+  animation: fadeIn 1s;
 }
