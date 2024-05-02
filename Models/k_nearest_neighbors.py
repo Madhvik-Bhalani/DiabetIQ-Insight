@@ -56,15 +56,6 @@ print("Precision: {:.2f}%".format(precision * 100))
 print("Recall: {:.2f}%".format(recall * 100))
 print("F1 Score: {:.2f}%".format(f1 * 100))
 
-def k_neighbors_metrics():
-    return [
-        "K_Neighbors",
-        "{:.2f}".format(ac_score * 100),
-        "{:.2f}".format(precision * 100),
-        "{:.2f}".format(recall * 100),
-        "{:.2f}".format(f1 * 100),
-    ]
-
 # Plot confusion matrix as heatmap
 class_labels = ['0', '1']
 plt.figure(figsize=(8, 6))
@@ -72,4 +63,4 @@ sns.heatmap(cm, annot=True, cmap='Blues', fmt='g', xticklabels=class_labels, yti
 plt.xlabel('Predicted Value')
 plt.ylabel('Actual Value')
 plt.title('Confusion Matrix(K-Neighbors Classifier)')
-plt.show()
+# plt.show()

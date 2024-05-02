@@ -21,9 +21,6 @@ classifier.fit(X_train, y_train)
 y_pred = classifier.predict(X_test)
 # print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1)) # [Predicted_Result,Actual_Result]
 
-decision_tree_data = decision_tree_metrics(y_test, y_pred)
-
-
 # save the classification model as a pickle file
 joblib.dump(classifier, "models/pkl_files/DecisionTree.pkl")
 
@@ -49,18 +46,9 @@ print("Precision: {:.2f}%".format(precision * 100))
 print("Recall: {:.2f}%".format(recall * 100))
 print("F1 Score: {:.2f}%".format(f1 * 100))
 
-def dicision_tree_metrics():
-    return [
-        "Dicision_Tree",
-        "{:.2f}".format(ac_score * 100),
-        "{:.2f}".format(precision * 100),
-        "{:.2f}".format(recall * 100),
-        "{:.2f}".format(f1 * 100),
-    ]
-
-
 # Plot confusion matrix as heatmap
 class_labels = ["0", "1"]
+
 plt.figure(figsize=(8, 6))
 sns.heatmap(
     cm,
@@ -73,4 +61,4 @@ sns.heatmap(
 plt.xlabel("Predicted Value")
 plt.ylabel("Actual Value")
 plt.title("Confusion Matrix(DecisionTree Classifier)")
-plt.show()
+# plt.show()

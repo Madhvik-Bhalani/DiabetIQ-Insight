@@ -1,5 +1,5 @@
 # Importing the libraries
-from data_preprocessing import *
+from .data_preprocessing import *
 import tensorflow as tf
 from sklearn.metrics import confusion_matrix, accuracy_score
 
