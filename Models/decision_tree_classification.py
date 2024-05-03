@@ -1,14 +1,7 @@
 # Importing the libraries
 from data_preprocessing import *
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import (
-    confusion_matrix,
-    accuracy_score,
-    precision_score,
-    recall_score,
-    f1_score,
-)
-
+from sklearn.metrics import confusion_matrix, accuracy_score ,precision_score, recall_score, f1_score
 import matplotlib.pyplot as plt
 import seaborn as sns
 import joblib
@@ -50,15 +43,8 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 class_labels = ["0", "1"]
 
 plt.figure(figsize=(8, 6))
-sns.heatmap(
-    cm,
-    annot=True,
-    cmap="Blues",
-    fmt="g",
-    xticklabels=class_labels,
-    yticklabels=class_labels,
-)
+sns.heatmap(cm, annot=True, cmap='Blues', fmt='g', xticklabels=class_labels, yticklabels=class_labels)
 plt.xlabel("Predicted Value")
 plt.ylabel("Actual Value")
 plt.title("Confusion Matrix(DecisionTree Classifier)")
-# plt.show()
+plt.show()

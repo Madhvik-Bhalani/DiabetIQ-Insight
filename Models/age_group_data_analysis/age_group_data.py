@@ -12,7 +12,6 @@ dataset_df["age_group"] = pd.cut(
     dataset_df["Age"], bins=bins, labels=labels, right=False
 )
 
-
 def calculate_avg_data(age):
 
     # Get the age group using pd.cut()

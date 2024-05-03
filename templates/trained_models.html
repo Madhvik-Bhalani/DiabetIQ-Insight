@@ -45,7 +45,7 @@ X_test = sc.transform(X_test)
 					<div class="col-md-4">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Matrix</h5>
+								<h5 class="card-title title-color"> Matrix</h5>
 								<table class="table">
 									<thead>
 										<tr>
@@ -78,7 +78,7 @@ X_test = sc.transform(X_test)
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Confusion Matrix</h5>
+								<h5 class="card-title title-color"> Confusion Matrix</h5>
 								<div>
 									<img src="{{ url_for('static', filename='images/Confusion_Matricx/Logistic_Regression.png') }}" class="img-fluid cm-img" alt="Logistic Regression Confusion Matricx"/>
 								</div>
@@ -130,7 +130,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-4">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Matrix</h5>
+								<h5 class="card-title title-color"> Matrix</h5>
 								<table class="table">
 									<thead>
 										<tr>
@@ -163,7 +163,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Confusion Matrix</h5>
+								<h5 class="card-title title-color"> Confusion Matrix</h5>
 								<div>
 									<img src="{{ url_for('static', filename='images/Confusion_Matricx/K_Neighbors_Classifier.png') }}" class="img-fluid cm-img" alt="K-Nearest-Neighbors Classifier Confusion Matricx"/>
 								</div>
@@ -201,7 +201,6 @@ classifier.fit(X_train, y_train)
 
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
-print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
 
 # Making the Confusion Matrix
 y_pred = classifier.predict(X_test)
@@ -233,7 +232,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-4">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Matrix</h5>
+								<h5 class="card-title title-color"> Matrix</h5>
 								<table class="table">
 									<thead>
 										<tr>
@@ -266,7 +265,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Confusion Matrix</h5>
+								<h5 class="card-title title-color"> Confusion Matrix</h5>
 								<div>
 									<img src="{{ url_for('static', filename='images/Confusion_Matricx/SVM.png') }}" class="img-fluid cm-img" alt="Support Vector Machine Confusion Matricx"/>
 								</div>
@@ -319,7 +318,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-4">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Matrix</h5>
+								<h5 class="card-title title-color"> Matrix</h5>
 								<table class="table">
 									<thead>
 										<tr>
@@ -352,7 +351,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Confusion Matrix</h5>
+								<h5 class="card-title title-color"> Confusion Matrix</h5>
 								<div>
 									<img src="{{ url_for('static', filename='images/Confusion_Matricx/KernalSVM.png') }}" class="img-fluid cm-img" alt="KernalSVM Confusion Matricx"/>
 								</div>
@@ -405,7 +404,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-4">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Matrix</h5>
+								<h5 class="card-title title-color"> Matrix</h5>
 								<table class="table">
 									<thead>
 										<tr>
@@ -438,7 +437,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Confusion Matrix</h5>
+								<h5 class="card-title title-color"> Confusion Matrix</h5>
 								<div>
 									<img src="{{ url_for('static', filename='images/Confusion_Matricx/naiveBayes.png') }}" class="img-fluid cm-img" alt="Naive Bayes Confusion Matricx"/>
 								</div>
@@ -491,7 +490,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-4">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Matrix</h5>
+								<h5 class="card-title title-color"> Matrix</h5>
 								<table class="table">
 									<thead>
 										<tr>
@@ -524,7 +523,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Confusion Matrix</h5>
+								<h5 class="card-title title-color"> Confusion Matrix</h5>
 								<div>
 									<img src="{{ url_for('static', filename='images/Confusion_Matricx/DecisionTree_Classifier.png') }}" class="img-fluid cm-img" alt="Decision Tree Classifier Confusion Matricx"/>
 								</div>
@@ -577,7 +576,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-4">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Matrix</h5>
+								<h5 class="card-title title-color"> Matrix</h5>
 								<table class="table">
 									<thead>
 										<tr>
@@ -610,7 +609,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Confusion Matrix</h5>
+								<h5 class="card-title title-color"> Confusion Matrix</h5>
 								<div>
 									<img src="{{ url_for('static', filename='images/Confusion_Matricx/RandomForest_Classifier.png') }}" class="img-fluid cm-img" alt="Random Forest Classifier Confusion Matricx"/>
 								</div>
@@ -639,7 +638,7 @@ def find_optimal_estimators():
 
 	# Get the best hyperparameters and corresponding accuracy
 	best_k = grid_search.best_params_['n_estimators']
-	print(best_k)
+
 	return best_k
 
 # Training the Random Forest Classification model on the Training set
@@ -648,7 +647,6 @@ classifier.fit(X_train, y_train)
 
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
-print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
 
 # Making the Confusion Matrix
 y_pred = classifier.predict(X_test)
@@ -680,7 +678,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-4">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Matrix</h5>
+								<h5 class="card-title title-color"> Matrix</h5>
 								<table class="table">
 									<thead>
 										<tr>
@@ -713,7 +711,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 					<div class="col-md-8">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title title-color">&bull; Confusion Matrix</h5>
+								<h5 class="card-title title-color"> Confusion Matrix</h5>
 								<div>
 									<img src="{{ url_for('static', filename='images/Confusion_Matricx/XGBoost.png') }}" class="img-fluid cm-img" alt="XGBoost Confusion Matricx"/>
 								</div>
@@ -752,7 +750,7 @@ print("F1 Score: {:.2f}%".format(f1 * 100))
 </code>
 			</pre>
 		</div>
-		<!-- Random Forest Classification End -->
+		<!-- XGBoost End -->
 
 
 

@@ -1,7 +1,9 @@
 # Importing the libraries
-from .data_preprocessing import *
+from data_preprocessing import *
 import tensorflow as tf
-from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.metrics import confusion_matrix, accuracy_score ,precision_score, recall_score, f1_score
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Part 1 - Building the ANN
 
@@ -39,6 +41,23 @@ y_pred = (y_pred > 0.5)
 
 # Making the Confusion Matrix
 cm = confusion_matrix(y_test, y_pred)
+ac_score = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
+
 print(cm)
-ac_score=accuracy_score(y_test, y_pred)
-print(f"Accuracy: {round(ac_score, 2) * 100:.2f}%")
+print("Accuracy: {:.2f}%".format(ac_score * 100))
+print("Precision: {:.2f}%".format(precision * 100))
+print("Recall: {:.2f}%".format(recall * 100))
+print("F1 Score: {:.2f}%".format(f1 * 100))
+
+# Plot confusion matrix as heatmap
+class_labels = ["0", "1"]
+
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm, annot=True, cmap='Blues', fmt='g', xticklabels=class_labels, yticklabels=class_labels)
+plt.xlabel("Predicted Value")
+plt.ylabel("Actual Value")
+plt.title("Confusion Matrix(Artificial Neural Network)")
+plt.show()

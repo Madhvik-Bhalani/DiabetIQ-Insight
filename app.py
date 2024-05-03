@@ -15,9 +15,8 @@ def Home():
 @app.route("/predict_diabetes", methods=["GET", "POST"])
 def predict_diabetes():
     if request.method == "GET":
-        return render_template(
-            "predict_diabetes.html", title="Assess Your Diabetes | DiabetIQ Insight"
-        )
+        return render_template("predict_diabetes.html", title="Assess Your Diabetes | DiabetIQ Insight")
+    
     if request.method == "POST":
         # convert form value into array
         features = [float(x) for x in request.form.values()]
@@ -32,26 +31,18 @@ def predict_diabetes():
         age = int(request.form.get("age"))
         age_group_avg_data = calculate_avg_data(age)
 
-        return render_template(
-            "predict_diabetes.html",
-            title="Assess Your Diabetes | DiabetIQ Insight",
-            datas=[predicted_data, features, age_group_avg_data],
-        )
+        return render_template("predict_diabetes.html",title="Assess Your Diabetes | DiabetIQ Insight",datas=[predicted_data, features, age_group_avg_data],)
 
 
 @app.route("/explore_dataset", methods=["GET"])
 def explore_dataset():
     data = pd.read_csv("Dataset/diabetes.csv")
-    return render_template(
-        "dataset.html", title="Explore Dataset | DiabetIQ Insight", datas=data
-    )
+    return render_template("dataset.html", title="Explore Dataset | DiabetIQ Insight", datas=data)
 
 
 @app.route("/trained_models", methods=["GET"])
 def trained_models():
-    return render_template(
-        "trained_models.html", title="Trained Models | DiabetIQ Insight"
-    )
+    return render_template("trained_models.html", title="Trained Models | DiabetIQ Insight")
 
 
 if __name__ == "__main__":

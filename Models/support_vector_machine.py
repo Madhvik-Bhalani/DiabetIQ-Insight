@@ -39,15 +39,6 @@ print("Precision: {:.2f}%".format(precision * 100))
 print("Recall: {:.2f}%".format(recall * 100))
 print("F1 Score: {:.2f}%".format(f1 * 100))
 
-def svm_metrics():
-    return [
-        "svm",
-        "{:.2f}".format(ac_score * 100),
-        "{:.2f}".format(precision * 100),
-        "{:.2f}".format(recall * 100),
-        "{:.2f}".format(f1 * 100),
-    ]
-
 # Plot confusion matrix as heatmap
 class_labels = ['0', '1']
 plt.figure(figsize=(8, 6))

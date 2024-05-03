@@ -1,4 +1,5 @@
-/* For General Uses */
+/* Styles for html and body*/
+
 html {
   scroll-behavior: smooth;
 }
@@ -27,7 +28,8 @@ input[type=number] {
   }
 }
 
-/* For base.html */
+/* Styles for base.html page */
+
 .navbar {
   background-color: #0b8fdc;
 }
@@ -44,7 +46,7 @@ input[type=number] {
 .nav-links {
   transition: all 0.3s ease;
   font-weight: 450;
-  color: white;
+  color: white !important;
 }
 
 .nav-links:hover {
@@ -60,17 +62,14 @@ input[type=number] {
   color: white;
 }
 
-/* Footer styles */
-/* .footer-container{
-    background-color:#0b8fdc ;
-} */
+/* Styles for foooter */
 
 .footer-text a {
   text-decoration: none;
 }
 
+/* Styles for index.html page */
 
-/* For index page */
 .home-container {
   margin-bottom: 108px;
   animation: fadeIn 1s;
@@ -91,15 +90,13 @@ input[type=number] {
       rgba(8, 0, 139, 1) 0%,
       rgba(9, 9, 121, 1) 26%,
       rgba(0, 212, 255, 1) 100%);
-  /* background-color:#0b8fdc  ; */
   opacity: 0.9;
   letter-spacing: 2px;
 }
 
 .predict-btn a {
-  text-transform: uppercase;
   color: white !important;
-  font-weight: 600;
+  font-weight: 490;
   font-size: 20px;
   text-decoration: none;
 }
@@ -117,7 +114,7 @@ input[type=number] {
   font-size: 18px;
 }
 
-/* styles for predict diabetes page */
+/* styles for predict_diabetes.html page */
 .predict-page-title {
   text-transform: uppercase;
   font-size: 1.7em;
@@ -147,7 +144,6 @@ input[type=number] {
   margin-bottom: 50px;
 }
 
-/* styles for predict_diabetes */
 .table-header-name {
   color: #0b8fdc !important;
   font-size: 18px;
@@ -156,7 +152,6 @@ input[type=number] {
 
 .table-container {
   padding: 10px 90px;
-
 }
 
 .table-text {
@@ -167,8 +162,8 @@ input[type=number] {
   width: 730px;
 }
 
+/* styles for dataset.html page */
 
-/* styles for dataset */
 .source-link {
   text-decoration: none;
 }
@@ -178,10 +173,17 @@ input[type=number] {
   animation: fadeIn 1s;
 }
 
-/* styles for trained models */
-.title-color{
+/* styles for trained_models.html page */
+
+.title-color {
   color: #0b8fdc;
 }
-.trained-model-container{
+
+.trained-model-container {
   animation: fadeIn 1s;
+}
+
+code {
+  border: 28px solid #cbdef1;
+  border-radius: 8px;
 }

@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/dataTables.bootstrap5.css') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='highlight/styles/github-dark-dimmed.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static',filename='favicon/favicon-32x32.png')}}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static',filename='favicon/favicon-16x16.png')}}">
 </head>
 
 <body>
@@ -25,7 +28,7 @@
     <div class="nav-link-container" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown mx-1">
-          <a class="nav-link dropdown-toggle  fs-5 nav-links" href="#" id="navbarDropdown" role="button"
+          <a class="nav-link dropdown-toggle fs-5 nav-links" href="#" id="navbarDropdown" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">
             Trained Models
           </a>
@@ -45,10 +48,12 @@
             <li><a class="dropdown-item" href="/trained_models#kernal_svm">Kernel SVM</a></li>
             <li><a class="dropdown-item" href="/trained_models#naive_bayes">Naive Bayes</a></li>
             <li>
-              <a class="dropdown-item" href="/trained_models#decision_tree_classification">Decision Tree Classification</a>
+              <a class="dropdown-item" href="/trained_models#decision_tree_classification">Decision Tree
+                Classification</a>
             </li>
             <li>
-              <a class="dropdown-item" href="/trained_models#random_forest_classification">Random Forest Classification</a>
+              <a class="dropdown-item" href="/trained_models#random_forest_classification">Random Forest
+                Classification</a>
             </li>
             <li><a class="dropdown-item" href="/trained_models#xg_boost">XGBoost</a></li>
           </ul>
@@ -60,8 +65,8 @@
     </div>
   </nav>
 
-  {% block content %} {% endblock %}
-
+  {% block content %} {% endblock %} 
+  <!-- Render All Other's Page Content Here -->
   <hr class="hr mt-5">
   <footer class="footer text-center w-100">
     <div class="p-3">
@@ -77,7 +82,7 @@
   <script src="{{ url_for('static', filename='js/dataTables.js') }}"></script>
   <script src="{{ url_for('static', filename='js/dataTables.bootstrap5.js') }}"></script>
   {% block dataset_table %} {% endblock %}
-  
+
 </body>
 
 </html>

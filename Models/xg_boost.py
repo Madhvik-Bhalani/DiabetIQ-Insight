@@ -1,10 +1,10 @@
 # Importing the libraries
 from data_preprocessing import *
 import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix, accuracy_score ,precision_score, recall_score, f1_score
 import xgboost
 import seaborn as sns
 import joblib
-from sklearn.metrics import confusion_matrix, accuracy_score ,precision_score, recall_score, f1_score
 
 # Training the XG Boost  model on the Training set
 classifier = xgboost.XGBClassifier()

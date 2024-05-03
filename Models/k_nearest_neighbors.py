@@ -63,4 +63,4 @@ sns.heatmap(cm, annot=True, cmap='Blues', fmt='g', xticklabels=class_labels, yti
 plt.xlabel('Predicted Value')
 plt.ylabel('Actual Value')
 plt.title('Confusion Matrix(K-Neighbors Classifier)')
-# plt.show()
+plt.show()

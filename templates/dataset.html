@@ -13,7 +13,6 @@
             href="https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database" target="_blank">kaggle</a>
     <p>
 
-
     <table id="dataset" class="table table-striped dataset-table mx-auto w-100 mt-2">
         <thead>
             <tr>
@@ -34,19 +33,17 @@
                 <td>{{ i[6] }}</td>
                 <td>{{ i[7] }}</td>
                 <td>{{ i[8] }}</td>
-
             </tr>
             {% endfor %}
         </tbody>
     </table>
-
 </div>
 
 <!-- create datatable object to render table -->
 {% block dataset_table %}
 <script>
-    new DataTable('#dataset',{
-        scrollY:500
+    new DataTable('#dataset', {
+        scrollY: 500
     });
 </script>
 {% endblock %}
